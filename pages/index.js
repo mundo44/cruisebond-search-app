@@ -6,14 +6,21 @@ import Head from 'next/head';
 // Mock data - datos inventados realista
 // Función para obtener datos de la API de CruiseBound
 async function fetchCruiseBoundSailings() {
-  const response = await fetch('https://sandbox.cruisebound-qa.com/sailings');
-  
+  // Call your Next.js API route, which acts as a proxy
+  const response = await fetch('/api/sailings');
+
+  // Check if the response from your Next.js API route was successful
   if (!response.ok) {
-    throw new Error(`Error HTTP: ${response.status}`);
+    // If not successful, parse the error message from your proxy
+    const errorData = await response.json();
+    throw new Error(`Error fetching sailings: ${response.status} - ${errorData.message || 'Unknown error'}`);
   }
-  
+
+  // Parse the JSON data received from your Next.js API route
   const data = await response.json();
-  console.log('Estructura de datos de la API:', data);
+
+  // Log the data structure received from your proxy (client-side)
+  console.log('Data structure from Next.js API (client-side):', data);
   return data;
 }
 
