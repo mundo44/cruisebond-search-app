@@ -1,4 +1,3 @@
-import '../styles/globals.css'
 // Al inicio de tu archivo, agrega:
 // pages/index.js
 import { useState, useEffect } from 'react';
@@ -146,19 +145,19 @@ const PriceInfoSection = () => {
             <div className="text-blue-600 text-2xl font-bold mb-2">10-Day</div>
             <div className="text-gray-700 mb-2">Mediterranean</div>
             <div className="text-sm text-gray-500">Starting from</div>
-            <div className="text-xl font-bold text-blue-600">$899</div>
+            <div className="text-xl font-bold text-blue-600">$449</div>
           </div>
           <div className="price-card">
             <div className="text-blue-600 text-2xl font-bold mb-2">14-Day</div>
             <div className="text-gray-700 mb-2">Alaska Adventure</div>
             <div className="text-sm text-gray-500">Starting from</div>
-            <div className="text-xl font-bold text-blue-600">$1,299</div>
+            <div className="text-xl font-bold text-blue-600">$1,179</div>
           </div>
           <div className="price-card">
             <div className="text-blue-600 text-2xl font-bold mb-2">21-Day</div>
             <div className="text-gray-700 mb-2">World Cruise</div>
             <div className="text-sm text-gray-500">Starting from</div>
-            <div className="text-xl font-bold text-blue-600">$2,999</div>
+            <div className="text-xl font-bold text-blue-600">$4499</div>
           </div>
         </div>
         
